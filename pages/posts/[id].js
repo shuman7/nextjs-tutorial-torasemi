@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 }
 // pathsは配列
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
   return {
